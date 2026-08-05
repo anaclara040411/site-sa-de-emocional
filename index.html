@@ -1,30 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espaço Acolher - Visconde</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Mente Leve - Saúde Mental na Escola</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Espaço Acolher 💚💙</h1>
-        <p>Um lugar seguro para cuidar da sua mente.</p>
-    </header>
+  <header class="navbar">
+    <div class="logo">🌱 Mente Leve</div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#respiro">Pausa para Respirar</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="card-interativo">
-            <h2>Como você está se sentindo hoje?</h2>
-            <div class="botoes-emocao">
-                <button onclick="responder('bem')">😊 Bem</button>
-                <button onclick="responder('ansioso')">😰 Ansioso(a)</button>
-                <button onclick="responder('cansado')">😴 Cansado(a)</button>
-            </div>
-            <p id="mensagem-retorno"></p>
-        </section>
-    </main>
+  <section id="inicio" class="hero">
+    <h1>Cuidar da sua mente é o seu maior superpoder.</h1>
+    <p>Um espaço seguro para estudantes aprenderem, desacelerarem e encontrarem apoio.</p>
+    <a href="#respiro" class="btn">Fazer um exercício rápido</a>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="dicas" class="cards-container">
+    <h2>Dicas para o dia a dia escolar</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🧠 Estudo Sem Estresse</h3>
+        <p>Faça pausas de 5 a 10 minutos a cada hora de estudo para recarregar o foco.</p>
+      </div>
+      <div class="card">
+        <h3>💤 Sono em Dia</h3>
+        <p>Dormir bem ajuda a fixar o aprendizado e reduz a ansiedade das provas.</p>
+      </div>
+      <div class="card">
+        <h3>💬 Converse</h3>
+        <p>Não guarde tudo para você. Falar com um amigo, professor ou orientador alivia o peso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="respiro" class="interactive-section">
+    <h2>Momento Desacelerar 🌬️</h2>
+    <p>Clique no botão e siga o círculo para relaxar por alguns segundos.</p>
+    
+    <div class="circle-container">
+      <div class="circle" id="breathCircle"></div>
+    </div>
+    
+    <button id="breathBtn" class="btn">Iniciar Respiração Guiada</button>
+  </section>
+
+  <footer>
+    <p>Espaço Mente Leve &copy; Criado para apoiar estudantes.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #37474f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00897b;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #455a64;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(77, 182, 172, 0.4);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #26a69a;
+  transform: translateY(-2px);
+}
+
+.cards-container {
+  padding: 4rem 8%;
+  text-align: center;
+}
+
+.cards-container h2 {
+  margin-bottom: 2rem;
+  color: #004d40;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #00796b;
+  margin-bottom: 0.8rem;
+}
+
+.interactive-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 2rem 8%;
+  border-radius: 20px;
+}
+
+.circle-container {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #80cbd3;
+  border-radius: 50%;
+  transition: transform 4s ease-in-out, background-color 4s;
+}
+
+.circle.grow {
+  transform: scale(1.8);
+  background-color: #a5d6a7;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #78909c;
+  font-size: 0.9rem;
+}
+const breathBtn = document.getElementById('breathBtn');
+const breathCircle = document.getElementById('breathCircle');
+
+let isBreathing = false;
+let breathInterval;
+
+breathBtn.addEventListener('click', () => {
+  if (!isBreathing) {
+    // Iniciar exercício
+    isBreathing = true;
+    breathBtn.textContent = "Parar Exercício";
+    startBreathing();
+    breathInterval = setInterval(startBreathing, 8000); // Repete a cada 8 segundos (4s inspira, 4s expira)
+  } else {
+    // Parar exercício
+    isBreathing = false;
+    breathBtn.textContent = "Iniciar Respiração Guiada";
+    clearInterval(breathInterval);
+    breathCircle.classList.remove('grow');
+  }
+});
+
+function startBreathing() {
+  // Expande o círculo (Inspire)
+  breathCircle.classList.add('grow');
+  
+  // Após 4 segundos, diminui o círculo (Expire)
+  setTimeout(() => {
+    if (isBreathing) {
+      breathCircle.classList.remove('grow');
+    }
+  }, 4000);
+}
