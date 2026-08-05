@@ -1,0 +1,158 @@
+/* Configurações Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #37474f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00897b;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #455a64;
+  margin-bottom: 2rem;
+}
+
+/* Botões Modernos */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #4db6ac;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(77, 182, 172, 0.4);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #26a69a;
+  transform: translateY(-2px);
+}
+
+/* Cards de Dicas */
+.cards-container {
+  padding: 4rem 8%;
+  text-align: center;
+}
+
+.cards-container h2 {
+  margin-bottom: 2rem;
+  color: #004d40;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #00796b;
+  margin-bottom: 0.8rem;
+}
+
+/* Área Interativa de Respiração */
+.interactive-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 2rem 8%;
+  border-radius: 20px;
+}
+
+.circle-container {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #80cbd3;
+  border-radius: 50%;
+  transition: transform 4s ease-in-out, background-color 4s;
+}
+
+/* Classe ativada via JavaScript para o efeito de respiração */
+.circle.grow {
+  transform: scale(1.8);
+  background-color: #a5d6a7;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #78909c;
+  font-size: 0.9rem;
+}
