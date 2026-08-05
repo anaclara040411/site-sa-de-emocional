@@ -93,3 +93,41 @@
     <button type="submit" class="btn">Enviar Mensagem</button>
   </form>
 </section>
+<section id="mascote-section" class="mascote-container">
+  <h2>Conheça seu Companheiro de Estudos! 🐼</h2>
+  <p>Dê um nome para ele e escolha o estilo que mais combina com seu dia.</p>
+
+  <div class="mascote-card">
+    <div class="panda-display">
+      <div class="panda-avatar">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left"><div class="pupil"></div></div>
+        <div class="eye right"><div class="pupil"></div></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        
+        <div id="pandaOutfit" class="outfit uniforme">👕</div>
+      </div>
+    </div>
+
+    <div class="panda-info">
+      <div class="dialog-box" id="pandaMessage">
+        "Olá! Eu sou seu amigo. Como você quer me chamar?"
+      </div>
+
+      <div class="name-input-group">
+        <input type="text" id="pandaNameInput" placeholder="Digite um nome..." maxlength="15">
+        <button id="saveNameBtn" class="btn-small">Salvar Nome</button>
+      </div>
+
+      <div class="outfit-selector">
+        <p><strong>Escolha o Estilo:</strong></p>
+        <button class="btn-outfit" onclick="changeOutfit('👕 Escolar', '👕')">🏫 Escola</button>
+        <button class="btn-outfit" onclick="changeOutfit('🎨 Artista', '🎨')">🎨 Criativo</button>
+        <button class="btn-outfit" onclick="changeOutfit('🎧 Relaxing', '🎧')">🎧 Música</button>
+        <button class="btn-outfit" onclick="changeOutfit('🧘 Pijama', '😴')">🛌 Relax</button>
+      </div>
+    </div>
+  </div>
+</section>
