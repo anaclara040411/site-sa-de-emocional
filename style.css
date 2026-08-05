@@ -156,3 +156,159 @@ footer {
   color: #78909c;
   font-size: 0.9rem;
 }
+/* Configurações Globais com Rolagem Suave */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 50%, #f0f4c3 100%);
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar Moderna com Vidro Fosco */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00796b;
+}
+
+.navbar nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #37474f;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #00897b;
+  transform: translateY(-2px);
+}
+
+/* Hero Section com Animação */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+/* Botões Estilizados */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(45deg, #4db6ac, #81c784);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(77, 182, 172, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(77, 182, 172, 0.6);
+}
+
+/* Seção de Sons da Natureza (Novidade!) */
+.relax-sounds {
+  padding: 3rem 8%;
+  text-align: center;
+}
+
+.sound-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sound-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.03);
+  transition: 0.3s;
+}
+
+.sound-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-5px);
+}
+
+.sound-card span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulário de Acolhimento Simples */
+.contact-section {
+  padding: 3rem 8%;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 3rem 8%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+  margin: 2rem auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  outline: none;
+  background: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00897b;
+}
+
+/* Animações Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
