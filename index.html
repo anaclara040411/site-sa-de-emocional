@@ -87,46 +87,74 @@
   <p style="text-align: center;">Deixe uma mensagem ou um desabafo anônimo se preferir.</p>
 
   <form class="contact-form" onsubmit="alert('Sua mensagem foi enviada com sucesso! Lembre-se: você não está só. 💚'); return false;">
-    <input type="text" placeholder="Seu nome (opcional)" />
+    <input type="text" placeholder="Seu nome" />
     <input type="email" placeholder="Seu e-mail ou contato" required />
     <textarea rows="4" placeholder="Como você está se sentindo hoje?" required></textarea>
     <button type="submit" class="btn">Enviar Mensagem</button>
   </form>
 </section>
-<section id="mascote-section" class="mascote-container">
-  <h2>Conheça seu Companheiro de Estudos! 🐼</h2>
-  <p>Dê um nome para ele e escolha o estilo que mais combina com seu dia.</p>
+<!-- Panda Mascot SVG -->
+<div id="panda-container" style="width: 200px; margin: 0 auto 20px;">
+  <svg viewBox="0 0 200 200" id="panda-svg">
+    <!-- Corpo -->
+    <ellipse cx="100" cy="120" rx="55" ry="40" class="panda-body" fill="#222" />
+    
+    <!-- Cabeça -->
+    <circle cx="100" cy="80" r="45" class="panda-head" fill="#fff" stroke="#222" stroke-width="2" />
+    
+    <!-- Orelhas -->
+    <circle cx="75" cy="65" r="15" class="panda-ear" fill="#222" />
+    <circle cx="125" cy="65" r="15" class="panda-ear" fill="#222" />
+    
+    <!-- Olhos -->
+    <circle cx="85" cy="80" r="7" class="panda-eye" fill="#222">
+      <animate attributeName="r" values="7;5;7" dur="2s" repeatCount="indefinite" begin="0s" />
+    </circle>
+    <circle cx="115" cy="80" r="7" class="panda-eye" fill="#222">
+      <animate attributeName="r" values="7;5;7" dur="2s" repeatCount="indefinite" begin="0.3s" />
+    </circle>
+    
+    <!-- Nariz -->
+    <ellipse cx="100" cy="90" rx="4" ry="3" class="panda-nose" fill="#222" />
+    
+    <!-- Boca -->
+    <path d="M95,98 Q100,103 105,98" class="panda-mouth" stroke="#222" stroke-width="2" fill="none" />
+    
+    <!-- Bochechas -->
+    <circle cx="82" cy="85" r="6" class="panda-cheek" fill="#f9c6c9" opacity="0.7" />
+    <circle cx="118" cy="85" r="6" class="panda-cheek" fill="#f9c6c9" opacity="0.7" />
+    
+    <!-- ACESSÓRIOS (estilo escola) -->
+    <g id="panda-accessory-school" class="panda-accessory" style="display:none;">
+      <ellipse cx="100" cy="75" rx="18" ry="8" fill="#3498db" stroke="#1669ad" stroke-width="2" /> <!-- Chapéu escola -->
+      <rect x="90" y="85" width="20" height="4" fill="#3498db" />
+    </g>
+    
+    <!-- ACESSÓRIOS (estilo criativo) -->
+    <g id="panda-accessory-criativo" class="panda-accessory" style="display:none;">
+      <ellipse cx="100" cy="65" rx="22" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2" /> <!-- Lenço criativo -->
+      <circle cx="100" cy="65" r="4" fill="#fff" /> <!-- Nó -->
+    </g>
+    
+    <!-- ACESSÓRIOS (estilo música) -->
+    <g id="panda-accessory-musica" class="panda-accessory" style="display:none;">
+      <ellipse cx="100" cy="70" rx="28" ry="12" fill="none" stroke="#27ae60" stroke-width="3" /> <!-- Fone -->
+      <circle cx="80" cy="70" r="8" fill="#27ae60" />
+      <circle cx="120" cy="70" r="8" fill="#27ae60" />
+    </g>
+    
+    <!-- ACESSÓRIOS (estilo relax) -->
+    <g id="panda-accessory-relax" class="panda-accessory" style="display:none;">
+      <ellipse cx="100" cy="65" rx="25" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" /> <!-- Tiara relax -->
+      <ellipse cx="100" cy="65" rx="8" ry="14" fill="#fff" opacity="0.8" /> <!-- Flor -->
+    </g>
+  </svg>
+  
+  <div style="text-align:center; margin-top:8px;">
+    <span id="panda-name" style="font-size:1.2em; font-weight:bold; color:#34495e;">Pandinha</span>
+  </div>
+</div>
 
-  <div class="mascote-card">
-    <div class="panda-display">
-      <div class="panda-avatar">
-        <div class="ear left"></div>
-        <div class="ear right"></div>
-        <div class="eye left"><div class="pupil"></div></div>
-        <div class="eye right"><div class="pupil"></div></div>
-        <div class="nose"></div>
-        <div class="mouth"></div>
-        
-        <div id="pandaOutfit" class="outfit uniforme">👕</div>
-      </div>
-    </div>
-
-    <div class="panda-info">
-      <div class="dialog-box" id="pandaMessage">
-        "Olá! Eu sou seu amigo. Como você quer me chamar?"
-      </div>
-
-      <div class="name-input-group">
-        <input type="text" id="pandaNameInput" placeholder="Digite um nome..." maxlength="15">
-        <button id="saveNameBtn" class="btn-small">Salvar Nome</button>
-      </div>
-
-      <div class="outfit-selector">
-        <p><strong>Escolha o Estilo:</strong></p>
-        <button class="btn-outfit" onclick="changeOutfit('👕 Escolar', '👕')">🏫 Escola</button>
-        <button class="btn-outfit" onclick="changeOutfit('🎨 Artista', '🎨')">🎨 Criativo</button>
-        <button class="btn-outfit" onclick="changeOutfit('🎧 Relaxing', '🎧')">🎧 Música</button>
-        <button class="btn-outfit" onclick="changeOutfit('🧘 Pijama', '😴')">🛌 Relax</button>
       </div>
     </div>
   </div>
