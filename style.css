@@ -307,8 +307,17 @@ body {
   border-color: #00897b;
 }
 
-/* Animações Keyframes */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Estilo base do panda */
+.panda-body, .panda-head {
+  transition: fill 0.4s;
+}
+
+/* Animação de piscar suave */
+.panda-eye {
+  transition: fill 0.3s;
+}
+
+/* Acessório genérico */
+.panda-accessory {
+  transition: all 0.4s;
 }
