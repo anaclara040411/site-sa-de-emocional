@@ -66,45 +66,22 @@ document.addEventListener('DOMContentLoaded', function() {
       // alert(`Nome "${val}" salvo!`);
     });
   }
+  <style>
+.panda-body, .panda-head {
+  transition: fill 0.4s;
+}
+.panda-accessory {
+  transition: all 0.4s;
+}
+.sound-btn {
+  transition: background 0.2s, transform 0.15s;
+}
+.sound-btn:active {
+  transform: scale(0.96);
+}
+</style>
+
   
-  // ====== Troca de Estilo do Panda ======
-  const styleBtns = document.querySelectorAll('.style-btn');
-  styleBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      // Remover seleção anterior
-      styleBtns.forEach(b => b.style.outline = 'none');
-      btn.style.outline = '3px solid #f1c40f';
-      
-      const style = btn.getAttribute('data-style');
-      currentStyle = style;
-      // Esconder todos os acessórios
-      document.querySelectorAll('.panda-accessory').forEach(g =>
-        g.style.display = 'none'
-      );
-      // Mostrar só o selecionado
-      document.getElementById(`panda-accessory-${style}`).style.display = 'block';
-      
-      // Salvar estilo no localStorage
-      localStorage.setItem('pandaStyle', style);
-    });
-  });
-  
-  // Carregar estilo salvo
-  function loadSavedStyle() {
-    const style = localStorage.getItem('pandaStyle') || 'school';
-    currentStyle = style;
-    document.querySelectorAll('.panda-accessory').forEach(g =>
-      g.style.display = 'none'
-    );
-    document.getElementById(`panda-accessory-${style}`).style.display = 'block';
-    
-    // Marcar botão selecionado visualmente
-    const selectedBtn = document.querySelector(`.style-btn[data-style="${style}"]`);
-    if (selectedBtn) {
-      selectedBtn.style.outline = '3px solid #f1c40f';
-    }
-  }
-  loadSavedStyle();
 });
 
 // ====== SONS PARA ACALMAR ======

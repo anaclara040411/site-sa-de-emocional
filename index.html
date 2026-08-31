@@ -60,100 +60,195 @@
 </body>
 </html>
 
-## Sons para Acalmar 🎧
-
-<div style="display:flex; gap:20px; justify-content:center; margin-bottom:15px;">
-  <button class="sound-btn" data-sound="chuva" title="Chuva Leve"
-          style="background:#3498db; color:white; border:none; border-radius:8px; padding:12px 20px; font-size:1.2em;">
-    🌧️ <strong>Chuva Leve</strong>
-  </button>
-  <button class="sound-btn" data-sound="ondas" title="Ondas do Mar"
-          style="background:#3498db; color:white; border:none; border-radius:8px; padding:12px 20px; font-size:1.2em;">
-    🌊 <strong>Ondas do Mar</strong>
-  </button>
-  <button class="sound-btn" data-sound="vento" title="Vento na Floresta"
-          style="background:#3498db; color:white; border:none; border-radius:8px; padding:12px 20px; font-size:1.2em;">
-    🍃 <strong>Vento na Floresta</strong>
-  </button>
-</div>
-
-<section id="contato" class="contact-section">
-  <h2 style="text-align: center; color: #00695c;">Precisa conversar? 💬</h2>
-  <p style="text-align: center;">Deixe uma mensagem ou um desabafo anônimo se preferir.</p>
-
-  <form class="contact-form" onsubmit="alert('Sua mensagem foi enviada com sucesso! Lembre-se: você não está só. 💚'); return false;">
-    <input type="text" placeholder="Seu nome" />
-    <input type="email" placeholder="Seu e-mail ou contato" required />
-    <textarea rows="4" placeholder="Como você está se sentindo hoje?" required></textarea>
-    <button type="submit" class="btn">Enviar Mensagem</button>
-  </form>
-</section>
-<!-- ===== BLOCO DO PANDA MASCOTE ===== -->
-<div class="panda-section" style="background:#f9f6ee; border-radius:18px; padding:25px; margin:30px 0; box-shadow:0 2px 12px rgba(52,73,94,0.08);">
-  <h2 style="text-align:center; margin-bottom:18px;">Conheça seu Companheiro de Estudos! 🐼</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Saúde Emocional — Respiro</title>
   
-  <!-- Panda SVG -->
-  <div id="panda-container" style="width:220px; margin:0 auto 18px;">
-    <svg viewBox="0 0 200 200" id="panda-svg">
-      <ellipse cx="100" cy="120" rx="55" ry="40" class="panda-body" fill="#222" />
-      <circle cx="100" cy="80" r="45" class="panda-head" fill="#fff" stroke="#222" stroke-width="2" />
-      <circle cx="75" cy="65" r="15" class="panda-ear" fill="#222" />
-      <circle cx="125" cy="65" r="15" class="panda-ear" fill="#222" />
-      <circle cx="85" cy="80" r="7" class="panda-eye" fill="#222">
-        <animate attributeName="r" values="7;5;7" dur="2s" repeatCount="indefinite" begin="0s" />
-      </circle>
-      <circle cx="115" cy="80" r="7" class="panda-eye" fill="#222">
-        <animate attributeName="r" values="7;5;7" dur="2s" repeatCount="indefinite" begin="0.3s" />
-      </circle>
-      <ellipse cx="100" cy="90" rx="4" ry="3" class="panda-nose" fill="#222" />
-      <path d="M95,98 Q100,103 105,98" class="panda-mouth" stroke="#222" stroke-width="2" fill="none" />
-      <circle cx="82" cy="85" r="6" class="panda-cheek" fill="#f9c6c9" opacity="0.7" />
-      <circle cx="118" cy="85" r="6" class="panda-cheek" fill="#f9c6c9" opacity="0.7" />
-      <g id="panda-accessory-school" class="panda-accessory" style="display:none;">
-        <ellipse cx="100" cy="75" rx="18" ry="8" fill="#3498db" stroke="#1669ad" stroke-width="2" />
-        <rect x="90" y="85" width="20" height="4" fill="#3498db" />
-      </g>
-      <g id="panda-accessory-criativo" class="panda-accessory" style="display:none;">
-        <ellipse cx="100" cy="65" rx="22" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2" />
-        <circle cx="100" cy="65" r="4" fill="#fff" />
-      </g>
-      <g id="panda-accessory-musica" class="panda-accessory" style="display:none;">
-        <ellipse cx="100" cy="70" rx="28" ry="12" fill="none" stroke="#27ae60" stroke-width="3" />
-        <circle cx="80" cy="70" r="8" fill="#27ae60" />
-        <circle cx="120" cy="70" r="8" fill="#27ae60" />
-      </g>
-      <g id="panda-accessory-relax" class="panda-accessory" style="display:none;">
-        <ellipse cx="100" cy="65" rx="25" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" />
-        <ellipse cx="100" cy="65" rx="8" ry="14" fill="#fff" opacity="0.8" />
-      </g>
-    </svg>
-    <div style="text-align:center; margin-top:8px;">
-      <span id="panda-name" style="font-size:1.2em; font-weight:bold; color:#34495e;">Pandinha</span>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c9d6e2 100%);
+      color: #2c3e50;
+      margin: 0;
+      min-height: 100vh;
+      padding: 0 10px;
+    }
+    
+    .container {
+      max-width: 720px;
+      margin: 40px auto 20px;
+      background: #fffefc;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(52,73,94,0.12);
+      padding: 32px 24px 38px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #27ae60;
+      margin-bottom: 18px;
+      font-size: 2.2em;
+      letter-spacing: -1px;
+    }
+    
+    h2 {
+      color: #34495e;
+      margin-top: 32px;
+      margin-bottom: 14px;
+      font-size: 1.4em;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      font-size: 1.08em;
+    }
+    
+    /* ===== PANDA MASCOT ===== */
+    #panda-container {
+      width: 220px;
+      margin: 0 auto 18px;
+    }
+    
+    .panda-head, .panda-body {
+      transition: fill 0.4s cubic-bezier(.4,2,.6,1);
+    }
+    
+    .panda-accessory {
+      transition: all 0.4s cubic-bezier(.4,1.2,.6,1);
+      opacity: 0.95;
+    }
+    
+    /* ===== SONS ===== */
+    .sound-btn {
+      transition: background 0.25s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(52,73,94,0.08);
+      font-weight: 500;
+      border: none;
+      outline: none;
+    }
+    
+    .sound-btn:active {
+      transform: scale(0.96);
+      box-shadow: 0 1px 3px rgba(52,73,94,0.06);
+    }
+    
+    /* ===== FORM ===== */
+    .btn-primary {
+      background: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-left: 8px;
+    }
+    
+    .btn-primary:hover {
+      background: #27ae60;
+    }
+    
+    input[type="text"] {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      font-size: 1em;
+      transition: border 0.2s;
+      outline: none;
+      width: 170px;
+      margin-right: 6px;
+    }
+    
+    input[type="text"]:focus {
+      border: 1.5px solid #3498db;
+    }
+    
+    /* ===== SECTIONS ===== */
+    .panda-section {
+      background: linear-gradient(125deg, #f9f6ee 70%, #e8f5e9 100%);
+      border-radius: 18px;
+      padding: 26px 20px 22px;
+      margin: 34px 0 28px;
+      box-shadow: 0 2px 14px rgba(52,73,94,0.09);
+    }
+    
+    .sounds-section {
+      background: linear-gradient(125deg, #ecf0f1 70%, #d4e6f1 100%);
+      border-radius: 14px;
+      padding: 20px 16px 18px;
+      margin: 22px 0 32px;
+      box-shadow: 0 1px 8px rgba(52,73,94,0.07);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .container {
+        padding: 14px 6px 22px;
+      }
+      #panda-container {
+        width: 150px;
+      }
+      .sound-btn {
+        width: 100%;
+        min-width: 0;
+        font-size: 1em;
+      }
+      .panda-section, .sounds-section {
+        padding: 16px 4px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>🌱 Saúde Emocional</h1>
+    <div class="subtitle">Um espaço seguro para estudantes aprenderem, desacelerarem e encontrarem apoio.</div>
+    
+    <hr style="border:0; border-top:2px dashed #bdc3c7; margin:18px 0 30px;">
+
+    <!-- ===== DICAS ===== -->
+    <h2>💡 Dicas para o dia a dia escolar</h2>
+    <ul style="line-height:1.8; margin-left:18px;">
+      <li><strong>🧠 Estudo Sem Estresse:</strong> Faça pausas de 5 a 10 minutos a cada hora de estudo.</li>
+      <li><strong>💤 Sono em Dia:</strong> Dormir bem fixa o aprendizado e reduz a ansiedade.</li>
+      <li><strong>💬 Converse:</strong> Falar com amigos, professores ou orientadores alivia o peso.</li>
+    </ul>
+    
+    <!-- ===== RESPIRAÇÃO GUIADA ===== -->
+    <h2>🌬️ Momento Desacelerar</h2>
+    <div style="text-align:center; margin-bottom:18px;">
+      <button id="breath-btn" style="background:#3498db; color:white; border:none; border-radius:6px; padding:10px 32px; font-size:1.1em; cursor:pointer;">
+        Iniciar Respiração Guiada
+      </button>
     </div>
-  </div>
-
-  <!-- Formulário de nome -->
-  <form id="panda-form" autocomplete="off" style="text-align:center; margin-bottom:12px;">
-    <label for="panda-input" style="font-weight:500;">Dê um nome para seu panda:</label>
-    <input type="text" id="panda-input" required
-           style="width:160px; margin-left:8px; padding:6px; border-radius:4px; border:1px solid #ccc;"
-           placeholder="Ex: Bambu, Nuvem, Fofo...">
-    <button type="submit" class="btn" style="margin-left:12px; background:#2ecc71; color:white; border:none; border-radius:4px; padding:7px 16px; cursor:pointer;">
-      Salvar Nome
-    </button>
-  </form>
-
-  <!-- Estilos -->
-  <div style="text-align:center;">
-    <strong style="margin-right:10px;">Escolha o Estilo:</strong>
-    <button class="style-btn" data-style="school" title="Escola" style="background:#3498db; color:white; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3em; margin:0 6px;">🏫</button>
-    <button class="style-btn" data-style="criativo" title="Criativo" style="background:#e74c3c; color:white; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3em; margin:0 6px;">🎨</button>
-    <button class="style-btn" data-style="musica" title="Música" style="background:#27ae60; color:white; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3em; margin:0 6px;">🎧</button>
-    <button class="style-btn" data-style="relax" title="Relax" style="background:#9b59b6; color:white; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3em; margin:0 6px;">🛌</button>
-  </div>
-</div>
-
+    
+    <!-- ===== SONS ===== -->
+    <div class="sounds-section">
+      <h2 style="margin-top:0;">🎧 Sons para Acalmar</h2>
+      <div style="text-align:center; margin-bottom:10px;">
+        <span style="color:#7f8c8d; font-size:0.97em;">Escolha uma atmosfera para concentrar ou relaxar:</span>
       </div>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <button class="sound-btn" data-sound="chuva" title="Chuva Leve"
+                style="background:#3498db; color:white; border-radius:8px; padding:12px 22px; font-size:1.1em;">
+          🌧️ <strong>Chuva Leve</strong>
+        </button>
+        <button class="sound-btn" data-sound="ondas" title="Ondas do Mar"
+                style="background:#3498db; color:white; border-radius:8px; padding:12px 22px; font-size:1.1em;">
+          🌊 <strong>Ondas do Mar</strong>
+        </button>
+        <button class="sound-btn" data-sound="vento" title="Vento na Floresta"
+                style="background:#349
+
+
+
     </div>
-  </div>
 </section>
